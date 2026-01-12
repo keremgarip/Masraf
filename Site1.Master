@@ -1,0 +1,211 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Masraf.Site1" %>
+
+<!DOCTYPE html>
+
+<html lang="tr">
+<head runat="server">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Masraf Yönetim Paneli</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <link id="twStyle" rel="stylesheet" href="dist/app_skin_sale-light.css?v=1" asp-append-version="true">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <main class="flex fluid alignStretch justifyStart">
+            <aside>
+                <a href="/" class="logo">
+                    <img src="img/logo.jpg" alt="Logo" class="logoBig" />
+                    <img src="img/redcell_logo_small.png" alt="Logo" class="logoSmall" />
+                </a>
+                <svg class="collapseButtonBack" width="29" height="118" viewBox="0 0 29 118" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M27 16C27 7.16344 19.8366 0 11 0H27H28.5V118H27C27 104.634 19.4399 96.7329 12.3207 89.2928C7.14086 83.8796 2.19441 78.7103 0.56282 71.8571C0.198995 70.3289 0 68.717 0 67C0 57.4555 6.1491 50.8717 12.5783 43.9879C19.6211 36.4472 27 28.5466 27 16Z" fill="#F8F8F8" />
+                </svg>
+                <div class="collapseButton">
+                    <a href="JavaScript:void(0);" class="menu-open">
+                        <svg class="openSvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44" height="44" viewBox="0 0 44 44">
+                            <defs>
+                                <clipPath id="clip-path1">
+                                    <path id="Path_18" data-name="Path 18" d="M22,0A22,22,0,0,1,0-22,22,22,0,0,1,22-44,22,22,0,0,1,44-22,22,22,0,0,1,22,0Z" transform="translate(0 44)" clip-rule="evenodd" />
+                                </clipPath>
+                                <clipPath id="clip-path2">
+                                    <path id="Path_17" data-name="Path 17" d="M-227,811H1213V-89H-227Z" transform="translate(0 44)" />
+                                </clipPath>
+                                <clipPath id="clip-path3">
+                                    <path id="Path_21" data-name="Path 21" d="M22-39.875A17.875,17.875,0,0,0,4.125-22,17.875,17.875,0,0,0,22-4.125,17.875,17.875,0,0,0,39.875-22,17.875,17.875,0,0,0,22-39.875Z" transform="translate(0 44)" clip-rule="evenodd" />
+                                </clipPath>
+                                <clipPath id="clip-path5">
+                                    <path id="Path_24" data-name="Path 24" d="M20.082-28.691a.667.667,0,0,1,.942.023.667.667,0,0,1-.023.943l-5.114,4.85H29.208a.667.667,0,0,1,.667.667.667.667,0,0,1-.667.667h-13.3L21-16.691a.667.667,0,0,1,.023.943.665.665,0,0,1-.483.207.663.663,0,0,1-.46-.184l-5.816-5.54a1.323,1.323,0,0,1-.391-.943,1.332,1.332,0,0,1,.4-.954Z" transform="translate(0 44)" />
+                                </clipPath>
+                            </defs>
+                            <g data-name="Group 12" clip-path="url(#clip-path1)">
+                                <g data-name="Group 11" clip-path="url(#clip-path2)">
+                                    <path class="border" data-name="Path 16" d="M-5,5H49V-49H-5Z" transform="translate(0 44)" />
+                                </g>
+                            </g>
+                            <g data-name="Group 14" clip-path="url(#clip-path3)">
+                                <g data-name="Group 13" clip-path="url(#clip-path2)">
+                                    <path class="background" data-name="Path 19" d="M-.875.875h45.75v-45.75H-.875Z" transform="translate(0 44)" />
+                                </g>
+                            </g>
+                            <g data-name="Group 16" clip-path="url(#clip-path5)">
+                                <g data-name="Group 15" clip-path="url(#clip-path2)">
+                                    <path class="line" data-name="Path 22" d="M8.875-10.542h26V-33.875h-26Z" transform="translate(0 44)" />
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+                    <a href="JavaScript:void(0);" class="menu-closed">
+                        <svg class="closeSvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44" height="44" viewBox="0 0 44 44">
+                            <defs>
+                                <clipPath id="clip-path">
+                                    <path id="Path_3" data-name="Path 3" d="M22,0A22,22,0,0,0,44-22,22,22,0,0,0,22-44,22,22,0,0,0,0-22,22,22,0,0,0,22,0Z" transform="translate(0 44)" />
+                                </clipPath>
+                                <clipPath id="clip-path-2">
+                                    <path id="Path_2" data-name="Path 2" d="M-227,976H1213V-90H-227Z" transform="translate(0 44)" />
+                                </clipPath>
+                                <clipPath id="clip-path-3">
+                                    <path id="Path_6" data-name="Path 6" d="M22-39.875A17.875,17.875,0,0,1,39.875-22,17.875,17.875,0,0,1,22-4.125,17.875,17.875,0,0,1,4.125-22,17.875,17.875,0,0,1,22-39.875Z" transform="translate(0 44)" />
+                                </clipPath>
+                                <clipPath id="clip-path-5">
+                                    <path id="Path_9" data-name="Path 9" d="M14.771-27.958H29.229a1.112,1.112,0,0,1,1.112,1.112,1.112,1.112,0,0,1-1.112,1.112H14.771a1.112,1.112,0,0,1-1.112-1.112A1.112,1.112,0,0,1,14.771-27.958Z" transform="translate(0 44)" />
+                                </clipPath>
+                                <clipPath id="clip-path-7">
+                                    <path id="Path_12" data-name="Path 12" d="M14.771-22.4H29.229a1.112,1.112,0,0,1,1.112,1.112,1.112,1.112,0,0,1-1.112,1.112H14.771a1.112,1.112,0,0,1-1.112-1.112A1.112,1.112,0,0,1,14.771-22.4Z" transform="translate(0 44)" />
+                                </clipPath>
+                                <clipPath id="clip-path-9">
+                                    <path id="Path_15" data-name="Path 15" d="M20.491-16.836H29.23a1.112,1.112,0,0,1,1.112,1.112,1.112,1.112,0,0,1-1.112,1.112H20.491a1.112,1.112,0,0,1-1.112-1.112,1.112,1.112,0,0,1,1.112-1.112Z" transform="translate(0 44)" />
+                                </clipPath>
+                            </defs>
+                            <g id="Group_2" data-name="Group 2" clip-path="url(#clip-path)">
+                                <g id="Group_1" data-name="Group 1" clip-path="url(#clip-path-2)">
+                                    <path class="border" id="Path_1" data-name="Path 1" d="M-5-49H49V5H-5Z" transform="translate(0 44)" fill="#333" />
+                                </g>
+                            </g>
+                            <g id="Group_4" data-name="Group 4" clip-path="url(#clip-path-3)">
+                                <g id="Group_3" data-name="Group 3" clip-path="url(#clip-path-2)">
+                                    <path class="background" id="Path_4" data-name="Path 4" d="M-.875-44.875h45.75V.875H-.875Z" transform="translate(0 44)" fill="#ddd" />
+                                </g>
+                            </g>
+                            <g id="Group_6" data-name="Group 6" clip-path="url(#clip-path-5)">
+                                <g id="Group_5" data-name="Group 5" clip-path="url(#clip-path-2)">
+                                    <path class="line" id="Path_7" data-name="Path 7" d="M8.658-32.958H35.342v12.224H8.658Z" transform="translate(0 44)" fill="#333" />
+                                </g>
+                            </g>
+                            <g id="Group_8" data-name="Group 8" clip-path="url(#clip-path-7)">
+                                <g id="Group_7" data-name="Group 7" clip-path="url(#clip-path-2)">
+                                    <path class="line" id="Path_10" data-name="Path 10" d="M8.658-27.4H35.342v12.224H8.658Z" transform="translate(0 44)" fill="#333" />
+                                </g>
+                            </g>
+                            <g id="Group_10" data-name="Group 10" clip-path="url(#clip-path-9)">
+                                <g id="Group_9" data-name="Group 9" clip-path="url(#clip-path-2)">
+                                    <path class="line" id="Path_13" data-name="Path 13" d="M14.378-21.836H35.342V-9.612H14.378Z" transform="translate(0 44)" fill="#333" />
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+                <nav class="sideNav">
+                    <asp:Panel ID="pnlAdmin" runat="server">
+                        <ul id="metismenu" class="metismenu">
+                            <li id="liAnasayfa" runat="server" class="menu-item">
+                                <img src="/img/icons/home.png" alt="" class="navIcon">
+                                <a class="noSub" href="default.aspx">Anasayfa</a>
+                            </li>
+                            <li id="liYonetici" runat="server" class="menu-item">
+                                <img src="/img/icons/personnel.png" alt="" class="navIcon">
+                                <a class="noSub" href="/masrafyonetici.aspx">Yöneticiler</a>
+                            </li>
+                            <li id="liPersonel" runat="server" class="menu-item">
+                                <img src="/img/icons/personnel.png" alt="" class="navIcon">
+                                <a class="noSub" href="/masrafpersonnels.aspx">Personel Listesi</a>
+                            </li>
+                            <li id="liMasrafGrup" runat="server" class="menu-item">
+                                <img src="/img/icons/sorumlu.png" alt="" class="navIcon">
+                                <a class="noSub" href="/masrafgruplist.aspx">Masraf Grup Yönetimi</a>
+                            </li>
+                            <li id="liMasrafFormu" runat="server" class="menu-item">
+                                <img src="/img/icons/form.png" alt="" class="navIcon">
+                                <a class="noSub" href="/masrafformulist.aspx">Masraf Yönetimi</a>
+                            </li>
+                            <li id="liGonderilen" runat="server" class="menu-item">
+                                <img src="/img/icons/checkmark.png" alt="" class="navIcon">
+                                <a class="noSub" href="/masrafgonderilen.aspx">Gönderilen Masraflar</a>
+                            </li>
+                            <li id="liMasrafOnay" runat="server" class="menu-item">
+                                <img src="/img/icons/hourglass.png" alt="" class="navIcon">
+                                <a class="noSub" href="/masrafonaylama.aspx">Onay Bekleyen Masraflar</a>
+                            </li>
+                            <li id="liExcelExport" runat="server" class="menu-item">
+                                <img src="/img/icons/excel.png" alt="" class="navIcon">
+                                <a class="noSub" href="/exportexcel.aspx">Excel Dışa Aktarma</a>
+                            </li>
+                        </ul>
+                    </asp:Panel>
+                </nav>
+                <div class="modulePic">
+                    <img class="currentModule" src="img/avatar.png" />
+                    <div class="form-group">
+                        <label class="brandName fs-24"></label>
+                    </div>
+                </div>
+            </aside>
+            <section class="right-side">
+                <div class="flex alignCenter userDetails print-none">
+                    <div id="divUserMenu" class="userNav">
+                        <a id="aProfil" class="userName flex alignCenter justifyCenter" onclick="logoutShowHideMenu();"><%= loggedInUserNameStr%></a>
+                        <div class="bg-effect"></div>
+                        <ul id="ulProfilMenu" class="account-options d-none">
+                            <li><a class="logout" href="logout.aspx">
+                                <img src="/img/icons/logout.svg" alt="Çıkış">Çıkış</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="thinkContent">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div id="formContent">
+                </div>
+            </section>
+        </main>
+        <input type="hidden" id="hddnmenu" name="hddnmenu" value="0">
+
+        <script src="dist/app.min.js" asp-append-version="true"></script>
+        <script src="js/pages/layout.js" asp-append-version="true"></script>
+        <script type="text/javascript" src="js/plugins/blockui/jquery.blockUI.js"></script>
+        <style>
+            .remove,
+            .removeBefore::before {
+                display: none;
+            }
+        </style>
+
+        <script>
+            function init() {
+                $('.userDetails').addClass('remove');
+                $('main').addClass('removeBefore');
+                $('aside').addClass('remove');
+                $('.contentSticky').css('padding', '0');
+            }
+            function logoutShowHideMenu() {
+                if (document.getElementById("hddnmenu").value == "0") {
+                    $('#ulProfilMenu').removeClass('account-options d-none');
+                    $('#ulProfilMenu').addClass('account-options d-block');
+                    document.getElementById("hddnmenu").value = "1";
+                }
+                else if (document.getElementById("hddnmenu").value == "1") {
+                    $('#ulProfilMenu').removeClass('account-options d-block');
+                    $('#ulProfilMenu').addClass('account-options d-none');
+                    document.getElementById("hddnmenu").value = "0";
+                }
+            }
+        </script>
+    </form>
+</body>
+</html>
